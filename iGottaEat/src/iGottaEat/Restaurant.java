@@ -29,7 +29,7 @@ public class Restaurant {
 		return url;
 	}
 	
-	public String setURL(String url) {
+	public void setURL(String url) {
 		this.url = url;
 	}
 	
