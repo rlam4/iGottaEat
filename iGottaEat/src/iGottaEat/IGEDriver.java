@@ -35,7 +35,12 @@ public class IGEDriver {
 
 		// Continues to provide user with "random" places to eat until "n" is typed
 		do {
-			System.out.println("Go eat at " + places.get(i).getName());
+			Restaurant randomRestaurant = places.get(i);
+			System.out.println("Go eat at " + randomRestaurant.getName());
+			System.out.println("Rating: " + randomRestaurant.getRating().toString());
+			System.out.println("Phone: " + randomRestaurant.getNumber());
+			System.out.println("Address: " + randomRestaurant.getAddress());
+			System.out.println(randomRestaurant.getURL());
 			System.out.println("Don't like it? Enter any key to get another place or type n to quit.");
 			ans = sc.next();
 			i++;
