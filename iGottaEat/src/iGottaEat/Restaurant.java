@@ -1,9 +1,8 @@
 package iGottaEat;
 
 public class Restaurant {
-	String name, number, times, address;
-	Double distance;
-	int price;
+	String name, number, address, url;
+	Double rating;
 	int allTimeVisitors;
 	int yearVisitors;
 	int monthVisitors;
@@ -26,11 +25,12 @@ public class Restaurant {
 		this.number = number;
 	}
 	
-	private String getTimes() {
-		return times;
+	private String getURL() {
+		return url;
 	}
-	private void setTimes(String times) {
-		this.times = times;
+	
+	private String setURL(String url) {
+		this.url = url;
 	}
 	
 	private String getAddress() {
@@ -40,18 +40,11 @@ public class Restaurant {
 		this.address = address;
 	}
 	
-	private Double getDistance() {
-		return distance;
+	private Double getRating() {
+		return rating;
 	}
-	private void setDistance(Double distance) {
-		this.distance = distance;
-	}
-	
-	private int getPrice() {
-		return price;
-	}
-	private void setPrice(int price) {
-		this.price = price;
+	private void setRating(Double rating) {
+		this.rating = rating;
 	}
 	
 	private int getAllTimeVisitors() {
