@@ -1,5 +1,5 @@
 def everything
-	puts "Welcome to the Random Food Generator you indecisive fuck."
+	puts "Welcome to the Random Food Generator you very kind and generous individual."
 	puts "Please manually enter the places you would like to eat.\nType whatever when done."
 	
 	place = gets.chomp
