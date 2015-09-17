@@ -11,39 +11,39 @@ public class Restaurant {
 	
 	/*getters and setters*/
 	
-	private String getName() {
+	public String getName() {
 		return name;
 	}
-	private void setName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 	
-	private String getNumber() {
+	public String getNumber() {
 		return number;
 	}
-	private void setNumber(String number) {
+	public void setNumber(String number) {
 		this.number = number;
 	}
 	
-	private String getURL() {
+	public String getURL() {
 		return url;
 	}
 	
-	private String setURL(String url) {
+	public String setURL(String url) {
 		this.url = url;
 	}
 	
-	private String getAddress() {
+	public String getAddress() {
 		return address;
 	}
-	private void setAddress(String address) {
+	public void setAddress(String address) {
 		this.address = address;
 	}
 	
-	private Double getRating() {
+	public Double getRating() {
 		return rating;
 	}
-	private void setRating(Double rating) {
+	public void setRating(Double rating) {
 		this.rating = rating;
 	}
 	
