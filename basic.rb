@@ -1,7 +1,8 @@
-def manual_entry(places)
+def manual_entry
 	puts "Welcome to the Random Food Generator you kind and generous individual."
 	puts "Please manually enter the places you would like to eat.\nType whatever when done."
 	
+	places = []
 	place = gets.chomp
 	places[0] = "Don't just put whatever as the only place to eat."
 	i = 0
@@ -51,7 +52,7 @@ else
 		file = ARGV[0]
 		places = parser(file)
 	else
-		places = manual_entry(places)
+		places = manual_entry
 	end  
 end
 
