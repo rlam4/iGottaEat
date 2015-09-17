@@ -1,9 +1,8 @@
-def everything
-	puts "Welcome to the Random Food Generator you very kind and generous individual."
+def manual_entry(places)
+	puts "Welcome to the Random Food Generator you kind and generous individual."
 	puts "Please manually enter the places you would like to eat.\nType whatever when done."
 	
 	place = gets.chomp
-	places = []
 	places[0] = "Don't just put whatever as the only place to eat."
 	i = 0
 	while place != "whatever" do
@@ -11,13 +10,16 @@ def everything
 		i = i+1
 		place = gets.chomp
 	end
+	places
+end
 	
+def random_place(places)	
 	places = shuffle(places)
 	i = 0
 	loop do
 		puts "Go eat at " + places[i]
 		puts "Don't like it? Press any key to get another place or type n to quit."
-		ans = gets.chomp
+		ans = STDIN.gets.chomp
 		i = i + 1
 		if i == places.length
 			places = shuffle(places)
@@ -37,5 +39,20 @@ def shuffle(a)
 	a
 end
 
-everything
-	
+def parser(file)
+	IO.readlines(file)
+end
+
+places = []
+if ARGV.length > 1
+	fail "usage: rand.rb <filename> or rand.rb" 
+else 
+	if ARGV.length == 1
+		file = ARGV[0]
+		places = parser(file)
+	else
+		places = manual_entry(places)
+	end  
+end
+
+random_place(places)	
