@@ -1,0 +1,35 @@
+Social Random Food Generator [iGottaEat (temporary name for now)]
+
+Description: 
+This is a multifunctional “app” that focuses on generating food places within proximity of the user and can either return a completely random one based on criteria, or return a playlist. This allows users to have a diversity of food and keep track of what they’re eating in comparison with other people. There will be a voting system that is implemented that keeps track of what is popular and what is being eaten.  
+
+Key Features:
+-	Voting system (Dependent on where the user decides to eat)
+-	Restaurant Playlists – This allows diversity for food. This is useful for people who want to check out new places to eat.
+-	Social Integration
+-	Most popular restaurants by user database – shows the restaurants that are most visited by the user database. This is determined by location.
+-	Recommendations – Users can be recommended by friends to visit certain restaurants.
+
+Design
+
+Classes:
+
+IGEDriver.java – The driver class, contains main.
+	Variables:
+-	ArrayList<Restaurant> restaurants – All restaurants in the data base
+-	ArrayList<User> users – All users in the data base
+
+Methods:
+-	Main – Contains the menu with options. To be implemented as a GUI
+1.	Create Account
+2.	Login 
+3.	Generate a Random Restaurant – Generates the first available restaurant given specified parameters
+4.	View Most Popular Restaurants
+
+YelpAPI.java – We are using a Yelp API for our project. Yelp is the source of our database as it contains all necessary and important information pertaining to food selection.
+
+TwoStepOAuth.java – part of the authentication process for the Yelp API. 
+
+User.java – This contains user information. Users’ playlists and methods that allows users to organize and edit their playlists. Recommendation by friends are also forwarded here.
+
+Restaurant.java – Contains information about the restaurant
